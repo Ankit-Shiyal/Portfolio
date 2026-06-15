@@ -5,10 +5,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: { DEFAULT: '#6366f1', light: '#818cf8', dark: '#4f46e5' },
+        primary: { DEFAULT: '#a855f7', light: '#c084fc', dark: '#9333ea' },
         secondary: { DEFAULT: '#06b6d4', light: '#22d3ee', dark: '#0891b2' },
         accent: { DEFAULT: '#f59e0b', light: '#fbbf24', dark: '#d97706' },
-        dark: { DEFAULT: '#0f172a', card: '#1e293b', border: '#334155' },
+        dark: { DEFAULT: '#050005', card: '#0f0015', border: '#1a0030' },
         light: { DEFAULT: '#f8fafc', card: '#ffffff', border: '#e2e8f0' },
       },
       fontFamily: {
@@ -24,14 +24,14 @@ export default {
       },
       keyframes: {
         float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' } },
-        glow: { '0%': { boxShadow: '0 0 5px rgba(99,102,241,0.3)' }, '100%': { boxShadow: '0 0 20px rgba(99,102,241,0.6)' } },
+        glow: { '0%': { boxShadow: '0 0 5px rgba(168,85,247,0.3)' }, '100%': { boxShadow: '0 0 20px rgba(168,85,247,0.6)' } },
         slideUp: { '0%': { transform: 'translateY(30px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
         slideDown: { '0%': { transform: 'translateY(-10px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
         fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'hero-glow': 'radial-gradient(ellipse at center, rgba(99,102,241,0.15) 0%, transparent 70%)',
+        'hero-glow': 'radial-gradient(ellipse at center, rgba(168,85,247,0.15) 0%, transparent 70%)',
       },
     },
   },

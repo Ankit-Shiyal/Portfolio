@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenu, HiX } from 'react-icons/hi';
-import { FiSun, FiMoon } from 'react-icons/fi';
-import { useTheme } from '../context/ThemeContext';
 
 const navLinks = [
   { name: 'Home', href: '#home' },
@@ -14,7 +12,6 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const { darkMode, toggleDarkMode } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -67,26 +64,6 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-3">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={toggleDarkMode}
-              className="p-2.5 rounded-xl bg-gray-100 dark:bg-dark-card text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-dark-border transition-all duration-300"
-              aria-label="Toggle dark mode"
-            >
-              <AnimatePresence mode="wait">
-                {darkMode ? (
-                  <motion.div key="sun" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.3 }}>
-                    <FiSun className="w-5 h-5" />
-                  </motion.div>
-                ) : (
-                  <motion.div key="moon" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.3 }}>
-                    <FiMoon className="w-5 h-5" />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.button>
-
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="md:hidden p-2.5 rounded-xl bg-gray-100 dark:bg-dark-card text-gray-600 dark:text-gray-300"

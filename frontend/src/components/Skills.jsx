@@ -78,7 +78,7 @@ function CircularProgress({ level, label, inView, delay }) {
           />
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#6366f1" />
+              <stop offset="0%" stopColor="#a855f7" />
               <stop offset="100%" stopColor="#06b6d4" />
             </linearGradient>
           </defs>
