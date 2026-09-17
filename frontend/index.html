@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Ankit Shiyal - Full Stack Web Developer Portfolio. Specializing in React, Node.js, and modern web technologies. Based in Bhavnagar, Gujarat, India." />
     <meta name="keywords" content="Ankit Shiyal, Full Stack Developer, Web Developer, React, Node.js, Portfolio, Bhavnagar, Gujarat" />
@@ -13,7 +13,7 @@
     <meta property="og:description" content="Aspiring Full Stack Web Developer with expertise in HTML, CSS, JavaScript, Bootstrap, Node.js, and Express.js." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ankit-shiyal.vercel.app" />
-    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image" content="images/my-photo.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Ankit Shiyal - Full Stack Web Developer" />
@@ -22,11 +22,403 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="sitemap" type="application/xml" href="sitemap.xml" />
     <title>Ankit Shiyal | Full Stack Web Developer</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <header>
+      <nav id="site-nav" class="navbar-portfolio" aria-label="Main navigation">
+        <div class="site-container">
+          <div class="navbar-inner">
+            <a href="#home" class="nav-logo gradient-text">&lt;AS /&gt;</a>
+
+            <div class="nav-desktop">
+              <a class="nav-link-custom active" href="#home">Home</a>
+              <a class="nav-link-custom" href="#about">About</a>
+              <a class="nav-link-custom" href="#skills">Skills</a>
+              <a class="nav-link-custom" href="#projects">Projects</a>
+              <a class="nav-link-custom" href="#education">Education</a>
+              <a class="nav-link-custom" href="#contact">Contact</a>
+            </div>
+
+            <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-mobile">
+              <i data-feather="menu" class="icon-sm icon-menu"></i>
+              <i data-feather="x" class="icon-sm icon-close"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="nav-mobile" id="nav-mobile">
+          <div class="nav-mobile-inner">
+            <a class="nav-link-mobile active" href="#home">Home</a>
+            <a class="nav-link-mobile" href="#about">About</a>
+            <a class="nav-link-mobile" href="#skills">Skills</a>
+            <a class="nav-link-mobile" href="#projects">Projects</a>
+            <a class="nav-link-mobile" href="#education">Education</a>
+            <a class="nav-link-mobile" href="#contact">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+
+        <div class="site-container hero-content">
+          <div class="hero-text">
+            <p class="hero-eyebrow anim-item" style="animation-delay: 0.1s">Hi, my name is</p>
+
+            <h1 class="hero-name anim-item" style="animation-delay: 0.2s">Ankit Shiyal</h1>
+
+            <div class="hero-typing anim-item" style="animation-delay: 0.3s">
+              <span id="typed-text"></span>
+              <span class="typing-cursor"></span>
+            </div>
+
+            <p class="hero-location anim-item" style="animation-delay: 0.4s">
+              <i data-feather="map-pin" class="icon-sm"></i>
+              Bhavnagar, Gujarat, India
+            </p>
+
+            <p class="hero-desc anim-item" style="animation-delay: 0.5s">
+              Aspiring Full Stack Web Developer passionate about building responsive web applications and solving real-world problems with modern technologies.
+            </p>
+
+            <div class="hero-actions anim-item" style="animation-delay: 0.6s">
+              <a href="resume/Ankit_Shiyal_Resume.pdf" download class="btn btn-resume">
+                <i data-feather="download" class="icon-sm icon-bounce"></i>
+                Download Resume
+              </a>
+              <a href="#contact" class="btn btn-hire">
+                <i data-feather="mail" class="icon-sm"></i>
+                Hire Me
+              </a>
+            </div>
+
+            <div class="hero-social anim-item" style="animation-delay: 0.8s">
+              <a href="https://github.com/Ankit-Shiyal" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+                <i data-feather="github" class="icon-sm"></i>
+              </a>
+              <a href="https://linkedin.com/in/ankit-shiyal-740734307" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+                <i data-feather="linkedin" class="icon-sm"></i>
+              </a>
+              <a href="mailto:ankitshiyal2005@gmail.com" class="social-btn" aria-label="Email">
+                <i data-feather="mail" class="icon-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-photo anim-photo" style="animation-delay: 0.3s">
+            <div class="hero-photo-glow"></div>
+            <div class="hero-photo-inner">
+              <img src="images/my-photo.png" alt="Ankit Shiyal" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-scroll anim-fade" style="animation-delay: 1.5s">
+          <div class="hero-scroll-inner">
+            <i data-feather="chevron-down" class="icon-md"></i>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section id="about" class="section">
+        <div class="about-overlay"></div>
+        <div class="site-container position-relative">
+          <div class="section-head" data-reveal data-reveal-up>
+            <h2 class="section-heading">About <span class="gradient-text">Me</span></h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="row g-gap-5 align-items-center">
+            <div class="col-12 col-lg-6" data-reveal data-reveal-left style="--reveal-delay: 0.2s">
+              <h3 class="block-title">Who I Am</h3>
+              <p class="block-text">
+                I'm a passionate Full Stack Web Developer currently pursuing my Diploma in Information Technology at Government Polytechnic Rajkot. With a strong foundation in both frontend and backend technologies, I strive to build web applications that are not only visually appealing but also highly functional and user-friendly.
+              </p>
+              <p class="block-text">
+                My journey in web development started with curiosity and has grown into a full-fledged passion. I enjoy turning complex problems into simple, beautiful, and intuitive solutions. When I'm not coding, you'll find me exploring new technologies or contributing to open-source projects.
+              </p>
+
+              <div class="row g-3 mt-2">
+                <div class="col-12 col-sm-4 d-flex">
+                  <div class="highlight-card w-100">
+                    <i data-feather="code" class="highlight-icon icon-md"></i>
+                    <h4 class="highlight-title">Frontend</h4>
+                    <p class="highlight-desc">React, HTML, CSS, JS, Bootstrap</p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 d-flex">
+                  <div class="highlight-card w-100">
+                    <i data-feather="server" class="highlight-icon icon-md"></i>
+                    <h4 class="highlight-title">Backend</h4>
+                    <p class="highlight-desc">Node.js, Express.js, MongoDB</p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 d-flex">
+                  <div class="highlight-card w-100">
+                    <i data-feather="tool" class="highlight-icon icon-md"></i>
+                    <h4 class="highlight-title">Tools</h4>
+                    <p class="highlight-desc">Git, GitHub, VS Code, Netlify</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6" data-reveal data-reveal-right style="--reveal-delay: 0.3s">
+              <h3 class="block-title mb-4">Experience Timeline</h3>
+
+              <div class="timeline">
+                <div class="timeline-item" data-reveal data-reveal-x style="--reveal-delay: 0.4s">
+                  <div class="timeline-dot"></div>
+                  <span class="timeline-year">2022-2025</span>
+                  <h4 class="timeline-title">Diploma in IT</h4>
+                  <p class="timeline-org">Government Polytechnic Rajkot</p>
+                  <p class="timeline-desc">CGPA: 7.14</p>
+                </div>
+                <div class="timeline-item" style="--reveal-delay: 0.55s">
+                  <div class="timeline-dot"></div>
+                  <span class="timeline-year">2024-2025</span>
+                  <h4 class="timeline-title">Full Stack Training</h4>
+                  <p class="timeline-org">Red &amp; White Multimedia Education</p>
+                  <p class="timeline-desc">Web Development</p>
+                </div>
+              </div>
+
+              <div class="objective-card" data-reveal data-reveal-up style="--reveal-delay: 0.7s">
+                <h4 class="objective-title">Career Objective</h4>
+                <p class="objective-text">
+                  To leverage my skills in full stack web development to build innovative and scalable web applications, while continuously learning and growing as a developer in a challenging and collaborative environment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS ============ -->
+      <section id="skills" class="section section-alt">
+        <div class="site-container">
+          <div class="section-head" data-reveal data-reveal-up>
+            <h2 class="section-heading">My <span class="gradient-text">Skills</span></h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="skill-tabs" id="skill-tabs" data-reveal data-reveal-up style="--reveal-delay: 0.1s"></div>
+
+          <div class="skill-panel-enter" id="skill-panel"></div>
+        </div>
+      </section>
+
+      <!-- ============ PROJECTS ============ -->
+      <section id="projects" class="section">
+        <div class="site-container">
+          <div class="section-head section-head-projects" data-reveal data-reveal-up>
+            <h2 class="section-heading"><span class="gradient-text">Projects</span></h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="project-toolbar" data-reveal data-reveal-up style="--reveal-delay: 0.1s">
+            <div class="filter-btns" id="filter-btns"></div>
+            <div class="search-wrap">
+              <i data-feather="search" class="icon-xs search-icon"></i>
+              <input type="text" id="search-input" class="form-control search-input" placeholder="Search projects..." autocomplete="off" />
+            </div>
+          </div>
+
+          <div class="row g-4 justify-content-center" id="projects-grid"></div>
+          <div id="projects-empty"></div>
+        </div>
+      </section>
+
+      <!-- ============ EDUCATION ============ -->
+      <section id="education" class="section section-alt">
+        <div class="edu-overlay"></div>
+        <div class="site-container position-relative">
+          <div class="section-head" data-reveal data-reveal-up>
+            <h2 class="section-heading">Education &amp; <span class="gradient-text">Training</span></h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="edu-wrapper">
+            <div class="edu-timeline">
+              <div class="edu-item" data-reveal data-reveal-left>
+                <div class="edu-icon g-ps">
+                  <i data-feather="book" class="icon-md"></i>
+                </div>
+                <div class="edu-card">
+                  <span class="edu-period">2022 - 2025</span>
+                  <h3 class="edu-title">Diploma in Information Technology</h3>
+                  <p class="edu-org">Government Polytechnic Rajkot</p>
+                  <ul class="edu-list">
+                    <li class="edu-detail"><span class="edu-dot"></span>CGPA: 7.14</li>
+                    <li class="edu-detail"><span class="edu-dot"></span>Focused on software development and web technologies</li>
+                    <li class="edu-detail"><span class="edu-dot"></span>Participated in technical workshops and hackathons</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="edu-item" data-reveal data-reveal-left style="--reveal-delay: 0.2s">
+                <div class="edu-icon g-sp">
+                  <i data-feather="award" class="icon-md"></i>
+                </div>
+                <div class="edu-card">
+                  <span class="edu-period">2024 - 2025</span>
+                  <h3 class="edu-title">Full Stack Web Development</h3>
+                  <p class="edu-org">Red &amp; White Multimedia Education</p>
+                  <ul class="edu-list">
+                    <li class="edu-detail"><span class="edu-dot"></span>Comprehensive full stack development training</li>
+                    <li class="edu-detail"><span class="edu-dot"></span>Hands-on projects with modern tech stack</li>
+                    <li class="edu-detail"><span class="edu-dot"></span>Industry-oriented curriculum</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section id="contact" class="section">
+        <div class="site-container">
+          <div class="section-head" data-reveal data-reveal-up>
+            <h2 class="section-heading">Get In <span class="gradient-text">Touch</span></h2>
+            <p class="section-sub">Have a project in mind or just want to say hi? I'd love to hear from you.</p>
+            <div class="section-line section-line-margin"></div>
+          </div>
+
+          <div class="row g-gap-5">
+            <div class="col-12 col-lg-5" data-reveal data-reveal-left style="--reveal-delay: 0.2s">
+              <div class="contact-info-card">
+                <div class="contact-icon-box">
+                  <i data-feather="mail" class="icon-md"></i>
+                </div>
+                <div>
+                  <p class="contact-info-label">Email</p>
+                  <a href="mailto:ankitshiyal2005@gmail.com" class="contact-info-value">ankitshiyal2005@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-info-card">
+                <div class="contact-icon-box">
+                  <i data-feather="phone" class="icon-md"></i>
+                </div>
+                <div>
+                  <p class="contact-info-label">Phone</p>
+                  <a href="tel:+919624908290" class="contact-info-value">+91 9624908290</a>
+                </div>
+              </div>
+
+              <div class="contact-info-card">
+                <div class="contact-icon-box">
+                  <i data-feather="map-pin" class="icon-md"></i>
+                </div>
+                <div>
+                  <p class="contact-info-label">Location</p>
+                  <p class="contact-info-value">Bhavnagar, Gujarat, India</p>
+                </div>
+              </div>
+
+              <div class="available-card">
+                <h4 class="available-title">Available for</h4>
+                <div class="available-badges">
+                  <span class="available-badge">Freelance</span>
+                  <span class="available-badge">Full-time</span>
+                  <span class="available-badge">Remote</span>
+                  <span class="available-badge">Internship</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-7" data-reveal data-reveal-right style="--reveal-delay: 0.3s">
+              <form id="contact-form" class="contact-form" novalidate>
+                <div class="row g-3 mb-1">
+                  <div class="col-12 col-sm-6">
+                    <label class="form-label" for="name">Name *</label>
+                    <input type="text" class="form-control form-control-ct" id="name" name="name" placeholder="Your name" />
+                    <p class="form-error" id="error-name"></p>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <label class="form-label" for="email">Email *</label>
+                    <input type="email" class="form-control form-control-ct" id="email" name="email" placeholder="your@email.com" />
+                    <p class="form-error" id="error-email"></p>
+                  </div>
+                </div>
+
+                <div class="mb-1">
+                  <label class="form-label" for="subject">Subject *</label>
+                  <input type="text" class="form-control form-control-ct" id="subject" name="subject" placeholder="What's this about?" />
+                  <p class="form-error" id="error-subject"></p>
+                </div>
+
+                <div class="mb-4">
+                  <label class="form-label" for="message">Message *</label>
+                  <textarea class="form-control form-control-ct" id="message" name="message" rows="5" placeholder="Tell me about your project..."></textarea>
+                  <p class="form-error" id="error-message"></p>
+                </div>
+
+                <button type="submit" class="btn btn-submit" id="submit-btn">
+                  <span id="submit-label">
+                    <i data-feather="send" class="icon-sm"></i>
+                    Send Message
+                  </span>
+                  <span id="submit-loading" class="d-none">
+                    <svg class="spinner" viewBox="0 0 24 24" fill="none">
+                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Sending...
+                  </span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="site-container">
+        <div class="footer-inner">
+          <div class="footer-left">
+            <a href="#home" class="footer-logo gradient-text">&lt;AS /&gt;</a>
+            <p class="footer-note">&copy; <span id="footer-year"></span> Ankit Shiyal. All rights reserved.</p>
+          </div>
+
+          <div class="footer-made">
+            <span>Made with</span>
+            <i data-feather="heart" class="icon-xs footer-heart"></i>
+            <span>by Ankit Shiyal</span>
+          </div>
+
+          <div class="footer-social">
+            <a href="https://github.com/Ankit-Shiyal" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i data-feather="github" class="icon-sm"></i>
+            </a>
+            <a href="https://linkedin.com/in/ankit-shiyal-740734307" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i data-feather="linkedin" class="icon-sm"></i>
+            </a>
+            <a href="mailto:ankitshiyal2005@gmail.com" aria-label="Email">
+              <i data-feather="mail" class="icon-sm"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="toast-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/feather.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
