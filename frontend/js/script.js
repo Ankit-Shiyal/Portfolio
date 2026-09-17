@@ -424,7 +424,7 @@
     },
   ];
 
-  var PROJECT_CATEGORIES = ['all', 'frontend', 'backend', 'fullstack'];
+  var PROJECT_CATEGORIES = ['all', 'frontend', 'backend'];
   var activeProjectCategory = 'all';
   var projectSearch = '';
 
@@ -531,12 +531,7 @@
       .join('');
 
     if (filtered.length === 0) {
-      var catName =
-        activeProjectCategory === 'fullstack'
-          ? 'fullstack'
-          : activeProjectCategory === 'all'
-            ? ''
-            : activeProjectCategory;
+      var catName = activeProjectCategory === 'all' ? '' : activeProjectCategory;
       var msg;
       if (query !== '' && catName !== '') {
         msg = 'No ' + catName + ' projects found matching your search.';
