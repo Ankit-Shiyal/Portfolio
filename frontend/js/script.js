@@ -384,6 +384,44 @@
       live: 'https://wether-api-neon.vercel.app/',
       gradient: 'g-ge',
     },
+    {
+      title: 'Food Ordering API',
+      desc: 'REST API for a food ordering application built using Node.js and Express.',
+      tech: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'REST API'],
+      category: 'backend',
+      github:
+        'https://github.com/Ankit-Shiyal/practice-node.js/tree/main/13-Food_Order',
+      live: '',
+      gradient: 'g-tc',
+    },
+    {
+      title: 'JWT Authentication',
+      desc: 'Secure authentication API using JWT, built using Node.js and Express.',
+      tech: ['Node.js', 'Express.js', 'MongoDB', 'JWT', 'REST API'],
+      category: 'backend',
+      github:
+        'https://github.com/Ankit-Shiyal/node-js/tree/main/11_jwt_Authentication',
+      live: '',
+      gradient: 'g-or',
+    },
+    {
+      title: 'Blog Management API',
+      desc: 'Blog management REST API with authentication, image uploads and validation.',
+      tech: [
+        'Node.js',
+        'Express.js',
+        'MongoDB',
+        'JWT',
+        'Cloudinary',
+        'Multer',
+        'Joi',
+      ],
+      category: 'backend',
+      github:
+        'https://github.com/Ankit-Shiyal/practice-node.js/tree/main/BlogProject',
+      live: '',
+      gradient: 'g-pp',
+    },
   ];
 
   var PROJECT_CATEGORIES = ['all', 'frontend', 'backend', 'fullstack'];
@@ -448,6 +486,12 @@
 
     gridEl.innerHTML = filtered
       .map(function (project, idx) {
+        var liveLink = project.live
+          ? '<a href="' +
+            project.live +
+            '" target="_blank" rel="noopener noreferrer" class="project-link">' +
+            '<i data-feather="external-link" class="icon-xs"></i> Live Demo</a>'
+          : '';
         return (
           '<div class="col-12 col-sm-6 col-lg-4 d-flex">' +
           '<article class="project-card" style="animation-delay:' +
@@ -477,10 +521,7 @@
           project.github +
           '" target="_blank" rel="noopener noreferrer" class="project-link">' +
           '<i data-feather="github" class="icon-xs"></i> GitHub</a>' +
-          '<a href="' +
-          project.live +
-          '" target="_blank" rel="noopener noreferrer" class="project-link">' +
-          '<i data-feather="external-link" class="icon-xs"></i> Live Demo</a>' +
+          liveLink +
           '</div>' +
           '</div>' +
           '</article>' +
