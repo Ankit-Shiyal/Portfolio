@@ -1,10 +1,10 @@
 # Ankit Shiyal - Portfolio Website
 
-Full Stack Developer Portfolio built with React, Node.js, MongoDB, and Tailwind CSS.
+Full Stack Developer Portfolio built with React, Node.js, and MongoDB.
 
 ## Tech Stack
 
-**Frontend:** React + Vite, Tailwind CSS, Framer Motion
+**Frontend:** React + Vite, React Router DOM, Bootstrap 5, Custom CSS, Feather Icons
 **Backend:** Node.js, Express.js
 **Database:** MongoDB Atlas
 **Email:** Nodemailer (Gmail)
@@ -12,6 +12,7 @@ Full Stack Developer Portfolio built with React, Node.js, MongoDB, and Tailwind 
 
 ## Features
 
+- Multi-page routing with React Router (`/`, `/about`, `/skills`, `/projects`, `/education`, `/contact`)
 - Modern hero section with typing animation
 - Animated skill bars and circular progress indicators
 - Dynamic project cards with category filtering and search
@@ -28,10 +29,11 @@ Full Stack Developer Portfolio built with React, Node.js, MongoDB, and Tailwind 
 ```
 portfolio/
 ├── frontend/          # React + Vite frontend
-│   ├── public/        # Static assets
+│   ├── public/        # Static assets (resume, robots.txt, sitemap.xml)
 │   └── src/           # Source code
-│       ├── components/ # React components
-│       └── context/   # Context providers
+│       ├── components/ # Shared components (Header, Slider, Work, Contact, Footer)
+│       ├── pages/      # Route pages (Home, About, Skills, Projects, Education, Contact)
+│       └── assets/    # Images
 ├── backend/           # Express.js backend
 │   ├── models/        # MongoDB models
 │   ├── routes/        # API routes
